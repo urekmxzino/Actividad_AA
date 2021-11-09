@@ -10,8 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Actividad_Semana_AA">
         <activity
+            android:name=".Form_Estante"
+            android:exported="true" />
+            android:label="Estantes">
+        <activity
+            android:name=".Form_Editorial"
+            android:exported="true" />
+            android:label="Editoriales">
+        <activity
+            android:name=".Form_Autor"
+            android:exported="true" />
+        android:label="Autores">
+        <activity
+            android:name=".Form_Libro"
+            android:exported="true" />
+            android:label="Libros">
+        <activity
+            android:name=".Menu_Agregar"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Libreria">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

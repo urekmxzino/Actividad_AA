@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "LibreriaDB";
-    public static final int DB_VERSION = 1;
+    public static final int DB_VERSION = 4;
     public static final String TABLE_LIBROS = "libros";
     public static final String TABLE_AUTOR = "autores";
     public static final String TABLE_ESTANTE = "estantes";
@@ -39,8 +39,8 @@ public class DbHelper extends SQLiteOpenHelper {
 
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_AUTOR + " (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "nombres TEXT NOT NULL," +
-                "apellidos TEXT NOT NULL," +
+                "nombre TEXT NOT NULL," +
+                "apellido TEXT NOT NULL," +
                 "nacionalidad TEXT NOT NULL)");
 
 

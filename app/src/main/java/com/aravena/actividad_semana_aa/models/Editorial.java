@@ -45,4 +45,8 @@ public class Editorial {
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
+    @Override
+    public String toString() {
+        return this.nombre;
+    }
 }

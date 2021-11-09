@@ -49,7 +49,7 @@ public class DbLibro extends DbHelper{
         SQLiteDatabase db = helper.getWritableDatabase();
 
         ArrayList<Libro> libros = new ArrayList<>();
-        Cursor cursor;
+        Cursor cursor = null;
         Libro libro= null;
         DbAutor dbaut = new DbAutor(context);
         DbEditorial dbedit = new DbEditorial(context);

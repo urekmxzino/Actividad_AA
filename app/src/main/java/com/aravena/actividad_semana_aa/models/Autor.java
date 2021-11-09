@@ -55,4 +55,10 @@ public class Autor {
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
     }
+
+
+    @Override
+    public String toString() {
+        return this.nombre;
+    }
 }

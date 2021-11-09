@@ -110,4 +110,9 @@ public class Libro {
     public void setEstante(Estante estante) {
         this.estante = estante;
     }
+
+    @Override
+    public String toString() {
+        return this.titulo;
+    }
 }

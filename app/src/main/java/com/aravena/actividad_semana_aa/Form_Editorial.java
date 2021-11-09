@@ -2,8 +2,6 @@ package com.aravena.actividad_semana_aa;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,45 +9,56 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.aravena.actividad_semana_aa.adapter.LibroAdapter;
-import com.aravena.actividad_semana_aa.models.Libro;
-import com.aravena.actividad_semana_aa.sqlite.DbLibro;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.aravena.actividad_semana_aa.models.Editorial;
+import com.aravena.actividad_semana_aa.sqlite.DbEditorial;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+public class Form_Editorial extends AppCompatActivity {
+    EditText txtNombreE;
+    EditText txtNacionalidadE;
+    Button addE_button;
 
-public class MainActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    FloatingActionButton add_button;
+
+
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_form_editorial);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        add_button = findViewById(R.id.add_button);
-
-        ArrayList<Libro> array = new DbLibro(getApplicationContext()).getLibros();
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        txtNombreE = findViewById(R.id.txtNombreE);
+        txtNacionalidadE = findViewById(R.id.txtNacionalidadE);
+        addE_button = findViewById(R.id.addE_button);
 
 
-        LibroAdapter adapter = new LibroAdapter(array);
-        recyclerView.setAdapter(adapter);
-        add_button.setOnClickListener(new View.OnClickListener() {
+
+        addE_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String nombre = txtNombreE.getText().toString();
+                String nacionalidad = txtNacionalidadE.getText().toString();
+
+                Editorial e = new Editorial(nombre,nacionalidad);
+                DbEditorial dbedit = new DbEditorial(getApplicationContext());
+                long id = dbedit.insertarEditorial(e);
+                if( id >= 0 ){
+                    Toast.makeText(Form_Editorial.this,
+                            nombre+" insertado", Toast.LENGTH_LONG).show();
+                    txtNombreE.setText("");
+                }else{
+                    Toast.makeText(Form_Editorial.this,
+                            "Error al insertar", Toast.LENGTH_LONG).show();
+                }
 
             }
         });
-
-
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -63,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) { // tomamos el id del item seleccionado
             case R.id.menu_inicio:
-                Toast.makeText(this, "Inicio", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 return true;
 
 

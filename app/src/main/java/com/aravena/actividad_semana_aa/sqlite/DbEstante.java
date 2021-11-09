@@ -51,9 +51,10 @@ public class DbEstante extends DbHelper {
         if (cursor.moveToFirst()) {
             do {
                 estante = new Estante(
-                        cursor.getString(0),
-                        cursor.getInt(1),
-                        cursor.getString(2)
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getInt(2),
+                        cursor.getString(3)
                 );
                 estantes.add(estante);
             } while (cursor.moveToNext());
