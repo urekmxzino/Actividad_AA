@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Form_Autor">
+    tools:context=".updateEditorial">
 
     <TextView
         android:id="@+id/textView"
@@ -13,14 +13,14 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="46dp"
         android:layout_marginEnd="197dp"
-        android:text="Nueva Editorial"
+        android:text="Editar Editorial"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtNombreE"
+        android:id="@+id/txtNombreEU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -35,7 +35,7 @@
 
 
     <EditText
-        android:id="@+id/txtNacionalidadE"
+        android:id="@+id/txtNacionalidadEU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -46,17 +46,30 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreE" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreEU" />
 
     <Button
-        android:id="@+id/addE_button"
+        android:id="@+id/update_buttonEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="169dp"
-        android:text="Agregar"
+        android:text="Guardar Cambios"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadE" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadEU" />
+
+    <Button
+        android:id="@+id/deleteEdit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="46dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_buttonEdit"
+        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadEU" />
 </androidx.constraintlayout.widget.ConstraintLayout>

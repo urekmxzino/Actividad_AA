@@ -7,43 +7,66 @@
     android:layout_marginRight="6dp"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="12dp">
+    android:padding="12dp"
+    android:id="@+id/mainLayout">
+
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Categoria: " />
-
-        <TextView
-            android:id="@+id/txtCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Categoria" />
-    </LinearLayout>
+        android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/txtFechaP"
+        android:id="@+id/ADASD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fecha Publicacion"
+        android:fontFamily="sans-serif-black"
+        android:includeFontPadding="false"
+        android:text="Titulo : "
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/txtTituloL"
+        android:id="@+id/txtTituloLibroU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Titulo"
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/txtDescripcion"
+        android:id="@+id/ADDASAD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Fecha de publicación : "
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtNumeroEstante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha Publicacion"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtASDADSAD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Descripción :"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtColorEstante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Descripcion"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtCopias2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Copias : "
         android:textSize="24sp" />
 
     <TextView
@@ -54,10 +77,26 @@
         android:textSize="24sp" />
 
     <TextView
+        android:id="@+id/txtCantP2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Cantidad de páginas :"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/txtCantP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cantidad Paginas"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtAutor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Autor :"
         android:textSize="24sp" />
 
     <TextView
@@ -68,10 +107,26 @@
         android:textSize="24sp" />
 
     <TextView
+        android:id="@+id/txtEditorial2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Editorial :"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/txtEditorial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Editorial"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtEstante2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Estante :"
         android:textSize="24sp" />
 
     <TextView

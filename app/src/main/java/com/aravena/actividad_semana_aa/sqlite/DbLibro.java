@@ -88,21 +88,23 @@ public class DbLibro extends DbHelper{
     }
 
 
-    public int actualizarLibro(int id, String titulo,
-                               String descripcion, String fechaP,int copias,int cantP){
+    public int actualizarLibro(Libro libro){
         DbHelper helper = new DbHelper(context);
         SQLiteDatabase db = helper.getWritableDatabase();
 
 
-        ContentValues values = new ContentValues();
-        values.put("titulo",titulo);
-        values.put("descripcion",descripcion);
-        values.put("fechaP",fechaP);
-        values.put("copias",copias);
-        values.put("cantP",cantP);
+        ContentValues valores = new ContentValues();
+        valores.put("titulo",libro.getTitulo());
+        valores.put("descripcion",libro.getDescripcion());
+        valores.put("fechaP",libro.getFechaP());
+        valores.put("copias",libro.getCopias());
+        valores.put("cantP",libro.getCantP());
+        valores.put("autor",libro.getAutor().getId());
+        valores.put("editorial",libro.getEditorial().getId());
+        valores.put("estante",libro.getEstante().getId());
 
-        int resultado = db.update(TABLE_LIBROS,values,
-                "id = ?", new String[] { String.valueOf(id) } );
+        int resultado = db.update(TABLE_LIBROS,valores,
+                "id = ?", new String[] { String.valueOf(libro.getId()) } );
 
         return resultado;
 

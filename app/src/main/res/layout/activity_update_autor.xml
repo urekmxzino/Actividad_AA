@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Form_Autor">
+    tools:context=".updateAutor">
 
     <TextView
         android:id="@+id/textView"
@@ -12,15 +12,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="46dp"
-        android:layout_marginEnd="197dp"
-        android:text="Nueva Editorial"
-        android:textSize="20sp"
+        android:layout_marginEnd="214dp"
+        android:text="Editar Autor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtNombreE"
+        android:id="@+id/txtNombreAU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -33,30 +32,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-
     <EditText
-        android:id="@+id/txtNacionalidadE"
+        android:id="@+id/txtApellidoAU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="106dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="102dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreAU" />
+
+    <EditText
+        android:id="@+id/txtNacionalidadAU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="102dp"
         android:ems="10"
         android:hint="Nacionalidad"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreE" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoAU" />
 
     <Button
-        android:id="@+id/addE_button"
+        android:id="@+id/update_buttonA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="169dp"
-        android:text="Agregar"
+        android:text="Guardar Cambios"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadE" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadAU" />
+
+    <Button
+        android:id="@+id/deleteA_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="25dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_buttonA"
+        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadAU" />
 </androidx.constraintlayout.widget.ConstraintLayout>

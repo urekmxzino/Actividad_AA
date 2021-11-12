@@ -10,28 +10,61 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Actividad_Semana_AA">
         <activity
+            android:name=".updateEstante"
+            android:exported="true"
+            android:label="Actualizar Estante"/>
+
+        <activity
+            android:name=".updateEditorial"
+            android:exported="true"
+            android:label="Actualizar Editorial"/>
+        <activity
+            android:name=".updateAutor"
+            android:exported="true"
+            android:label="Actualizar Autor"/>
+        <activity
+            android:name=".LibroList"
+            android:exported="true"
+            android:label="Libros (Click para editar, eliminar)"/>
+        <activity
+            android:name=".EditorialList"
+            android:exported="true"
+            android:label="Editoriales (Click para editar, eliminar)"/>
+        <activity
+            android:name=".EstanteList"
+            android:exported="true"
+            android:label="Estantes (Click para editar, eliminar)"/>
+        <activity
+            android:name=".AutorList"
+            android:exported="true"
+            android:label="Autores (Click para editar, eliminar)"/>
+        <activity
+            android:name=".UpdateLibro"
+            android:exported="true"
+            android:label="Actualizar Libro"/>
+        <activity
             android:name=".Form_Estante"
-            android:exported="true" />
-            android:label="Estantes">
+            android:exported="true"
+            android:label="Formulario Estante"/>
         <activity
             android:name=".Form_Editorial"
-            android:exported="true" />
-            android:label="Editoriales">
+            android:exported="true"
+            android:label="Formulario Editorial"/>
         <activity
             android:name=".Form_Autor"
-            android:exported="true" />
-        android:label="Autores">
+            android:exported="true"
+            android:label="Formulario Autor"/>
         <activity
             android:name=".Form_Libro"
-            android:exported="true" />
-            android:label="Libros">
+            android:exported="true"
+            android:label="Formulario Libro"/>
         <activity
             android:name=".Menu_Agregar"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Libreria">
+            android:label="Libreria (Click para editar, eliminar)">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

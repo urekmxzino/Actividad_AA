@@ -73,9 +73,10 @@ public class DbEstante extends DbHelper {
         if (cursor.moveToFirst()) {
 
                 estanteObtenido = new Estante(
-                        cursor.getString(0),
-                        cursor.getInt(1),
-                        cursor.getString(2)
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getInt(2),
+                        cursor.getString(3)
                 );
                 return estanteObtenido;
             }else{
@@ -95,19 +96,18 @@ public class DbEstante extends DbHelper {
 
 
 
-    public int actualizarEstante(int id, String letra,
-                               int numero, String color){
+    public int actualizarEstante(Estante estante){
         DbHelper helper = new DbHelper(context);
         SQLiteDatabase db = helper.getWritableDatabase();
 
 
-        ContentValues values = new ContentValues();
-        values.put("nombre",letra);
-        values.put("apellido",numero);
-        values.put("nacionalidad",color);
+        ContentValues valores = new ContentValues();
+        valores.put("letra", estante.getLetra());
+        valores.put("numero", estante.getNumero());
+        valores.put("color", estante.getColor());
 
-        int resultado = db.update(TABLE_ESTANTE,values,
-                "id = ?", new String[] { String.valueOf(id) } );
+        int resultado = db.update(TABLE_ESTANTE,valores,
+                "id = ?", new String[] { String.valueOf(estante.getId()) } );
 
         return resultado;
 

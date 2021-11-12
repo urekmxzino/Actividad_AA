@@ -13,57 +13,65 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.aravena.actividad_semana_aa.models.Autor;
-import com.aravena.actividad_semana_aa.sqlite.DbAutor;
+import com.aravena.actividad_semana_aa.models.Editorial;
+import com.aravena.actividad_semana_aa.sqlite.DbEditorial;
 
-public class Form_Autor extends AppCompatActivity {
-    EditText txtNombreA;
-    EditText txtApellidoA;
-    EditText txtNacionalidadA;
-    Button addA_button;
-
-
-
-
-
-
-
+public class updateEditorial extends AppCompatActivity {
+    EditText txtNombre,txtNacionalidad;
+    Button update,delete;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_autor);
-
-        txtNombreA = findViewById(R.id.txtNombreA);
-        txtApellidoA = findViewById(R.id.txtApellidoA);
-        txtNacionalidadA = findViewById(R.id.txtNacionalidadA);
-        addA_button = findViewById(R.id.addA_button);
-
+        setContentView(R.layout.activity_update_editorial);
+        txtNombre = findViewById(R.id.txtNombreEU);
+        txtNacionalidad = findViewById(R.id.txtNacionalidadEU);
+        update = findViewById(R.id.update_buttonEdit);
+        delete = findViewById(R.id.deleteEdit_button);
 
 
-        addA_button.setOnClickListener(new View.OnClickListener() {
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        Editorial editorial = (Editorial) bundle.get("Editorial");
+        txtNombre.setText(editorial.getNombre());
+        txtNacionalidad.setText(editorial.getNacionalidad());
+
+
+
+        update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nombre = txtNombreA.getText().toString();
-                String apellido = txtApellidoA.getText().toString();
-                String nacionalidad = txtNacionalidadA.getText().toString();
+                DbEditorial dbedit = new DbEditorial(getApplicationContext());
+                int id = editorial.getId();
+                String nombre = txtNombre.getText().toString();
+                String nacionalidad = txtNacionalidad.getText().toString();
 
-                Autor a = new Autor(nombre,apellido,nacionalidad);
-                DbAutor dbaut = new DbAutor(getApplicationContext());
-                long id = dbaut.insertarAutor(a);
-                if( id >= 0 ){
-                    Toast.makeText(Form_Autor.this,
-                            nombre+" insertado", Toast.LENGTH_LONG).show();
-                    txtNombreA.setText("");
-                    txtApellidoA.setText("");
-                    txtNacionalidadA.setText("");
-                }else{
-                    Toast.makeText(Form_Autor.this,
-                            "Error al insertar", Toast.LENGTH_LONG).show();
-                }
+                Editorial EditorialEdito = new Editorial(id,nombre,nacionalidad);
+                dbedit.actualizarEditorial(EditorialEdito);
+                Toast.makeText(getApplicationContext(), "Editorial modificada", Toast.LENGTH_SHORT).show();
 
             }
         });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DbEditorial dbedit = new DbEditorial(getApplicationContext());
+                dbedit.eliminarEditorial(editorial.getId());
+                Toast.makeText(getApplicationContext(), "Editorial eliminada", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

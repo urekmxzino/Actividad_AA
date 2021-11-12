@@ -86,19 +86,18 @@ public class DbAutor extends DbHelper{
         return res;
     }
 
-    public int actualizarAutor(int id, String nombre,
-                                  String apellido, String nacionalidad){
+    public int actualizarAutor(Autor autor){
         DbHelper helper = new DbHelper(context);
         SQLiteDatabase db = helper.getWritableDatabase();
 
 
-        ContentValues values = new ContentValues();
-        values.put("nombre",nombre);
-        values.put("apellido",apellido);
-        values.put("nacionalidad",nacionalidad);
+        ContentValues valores = new ContentValues();
+        valores.put("nombre", autor.getNombre());
+        valores.put("apellido",autor.getApellido());
+        valores.put("nacionalidad",autor.getNacionalidad());
 
-        int resultado = db.update(TABLE_AUTOR,values,
-                "id = ?", new String[] { String.valueOf(id) } );
+        int resultado = db.update(TABLE_AUTOR,valores,
+                "id = ?", new String[] { String.valueOf(autor.getId()) } );
 
         return resultado;
 

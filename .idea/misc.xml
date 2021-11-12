@@ -4,12 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/drawable/ic_add.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_autor_list.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_editorial_list.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_estante_list.xml" value="0.3625" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_form_autor.xml" value="0.3625" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_form_editorial.xml" value="0.3625" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_form_estante.xml" value="0.3625" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_form_libro.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_libro_list.xml" value="0.3625" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_menu_agregar.xml" value="0.3484375" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_update_autor.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_update_editorial.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_update_estante.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/activity_update_libro.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/item_autor.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/item_editorial.xml" value="0.3625" />
+        <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/item_estante.xml" value="0.3625" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/layout/item_libro.xml" value="0.25" />
         <entry key="..\:/Users/nicoa/AndroidStudioProjects/Actividad_Semana_AA/app/src/main/res/menu/menu.xml" value="0.3625" />
       </map>

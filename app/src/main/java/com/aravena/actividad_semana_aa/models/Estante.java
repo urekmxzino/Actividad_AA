@@ -1,6 +1,8 @@
 package com.aravena.actividad_semana_aa.models;
 
-public class Estante {
+import java.io.Serializable;
+
+public class Estante implements Serializable {
     private int id;
     private String letra;
     private int numero;
@@ -60,6 +62,6 @@ public class Estante {
 
     @Override
     public String toString() {
-        return this.color;
+        return this.letra;
     }
 }

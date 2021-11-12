@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Form_Autor">
+    tools:context=".updateEstante">
 
     <TextView
         android:id="@+id/textView"
@@ -12,22 +12,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="46dp"
-        android:layout_marginEnd="197dp"
-        android:text="Nueva Editorial"
+        android:layout_marginEnd="200dp"
+        android:text="Editar Estante"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtNombreE"
+        android:id="@+id/txtLetraEU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
         android:layout_marginTop="93dp"
         android:layout_marginEnd="102dp"
         android:ems="10"
-        android:hint="Nombre"
+        android:hint="Letra"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,28 +35,55 @@
 
 
     <EditText
-        android:id="@+id/txtNacionalidadE"
+        android:id="@+id/txtColorEU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="106dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="102dp"
         android:ems="10"
-        android:hint="Nacionalidad"
+        android:hint="Color"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreE" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNumEU" />
 
     <Button
-        android:id="@+id/addE_button"
+        android:id="@+id/update_buttonEst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="169dp"
-        android:text="Agregar"
+        android:text="Guardar Cambios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtColorEU" />
+
+    <EditText
+        android:id="@+id/txtNumEU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="102dp"
+        android:ems="10"
+        android:hint="Numero"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNacionalidadE" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLetraEU" />
+
+    <Button
+        android:id="@+id/delete_buttonEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="39dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_buttonEst"
+        app:layout_constraintTop_toBottomOf="@+id/txtColorEU" />
 </androidx.constraintlayout.widget.ConstraintLayout>

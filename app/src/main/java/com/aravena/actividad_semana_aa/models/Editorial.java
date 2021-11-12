@@ -1,6 +1,8 @@
 package com.aravena.actividad_semana_aa.models;
 
-public class Editorial {
+import java.io.Serializable;
+
+public class Editorial implements Serializable {
     private int id;
     private String nombre;
     private String nacionalidad;

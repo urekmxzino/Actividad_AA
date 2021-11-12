@@ -46,11 +46,11 @@ public class Form_Estante extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String letra = txtLetraE.getText().toString();
-                String numero = txtNumeroE.getText().toString();
+                int numero = Integer.parseInt(txtNumeroE.getText().toString());
                 String color = txtColorE.getText().toString();
-                int numero1 = Integer.parseInt(numero);
 
-                Estante e = new Estante(letra,numero1,color);
+
+                Estante e = new Estante(letra,numero,color);
                 DbEstante dbest = new DbEstante(getApplicationContext());
                 long id = dbest.insertarEstante(e);
                 if( id >= 0 ){
@@ -89,20 +89,20 @@ public class Form_Estante extends AppCompatActivity {
 
 
             case R.id.menu_Libro:
-                Intent intent1 = new Intent(this, Form_Libro.class);
+                Intent intent1 = new Intent(this, LibroList.class);
                 startActivity(intent1);
                 return true;
 
             case R.id.menu_Autor:
-                Intent intent2 = new Intent(this, Form_Autor.class);
+                Intent intent2 = new Intent(this, AutorList.class);
                 startActivity(intent2);
                 return true;
             case R.id.menu_Estante:
-                Intent intent3 = new Intent(this, Form_Estante.class);
+                Intent intent3 = new Intent(this, EstanteList.class);
                 startActivity(intent3);
                 return true;
             case R.id.menu_Editorial:
-                Intent intent4 = new Intent(this, Form_Editorial.class);
+                Intent intent4 = new Intent(this, EditorialList.class);
                 startActivity(intent4);
                 return true;
             default:

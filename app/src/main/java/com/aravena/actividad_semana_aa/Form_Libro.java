@@ -65,14 +65,14 @@ public class Form_Libro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_libro);
 
-        txtTituloL = findViewById(R.id.txtTituloL);
-        txtDescripcionL = findViewById(R.id.txtDescripcionL);
-        txtFechaL = findViewById(R.id.txtFechaL);
-        txtCopiasL = findViewById(R.id.txtCopiasL);
-        txtCantPL = findViewById(R.id.txtCantPL);
-        spaut = findViewById(R.id.spAut);
-        spedit = findViewById(R.id.spEdit);
-        spest = findViewById(R.id.spEst);
+        txtTituloL = findViewById(R.id.txtTituloLibroU);
+        txtDescripcionL = findViewById(R.id.txtDescripcionLibroU);
+        txtFechaL = findViewById(R.id.txtFechaLU);
+        txtCopiasL = findViewById(R.id.txtCopiasLU);
+        txtCantPL = findViewById(R.id.txtCantPLU);
+        spaut = findViewById(R.id.spAutU);
+        spedit = findViewById(R.id.spEditU);
+        spest = findViewById(R.id.spEstU);
 
         addL_button = findViewById(R.id.addL_button);
 
@@ -99,6 +99,11 @@ public class Form_Libro extends AppCompatActivity {
                 if (id >= 0) {
                     Toast.makeText(Form_Libro.this,
                             titulo + " insertado", Toast.LENGTH_LONG).show();
+                    txtTituloL.setText("");
+                    txtDescripcionL.setText("");
+                    txtFechaL.setText("");
+                    txtCopiasL.setText("");
+                    txtCantPL.setText("");
                 } else {
                     Toast.makeText(Form_Libro.this,
                             "Error al insertar", Toast.LENGTH_LONG).show();
@@ -124,28 +129,27 @@ public class Form_Libro extends AppCompatActivity {
         // condicional - switch
 
         switch (item.getItemId()) { // tomamos el id del item seleccionado
-
-
             case R.id.menu_inicio:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 return true;
 
+
             case R.id.menu_Libro:
-                Intent intent1 = new Intent(this, Form_Libro.class);
+                Intent intent1 = new Intent(this, LibroList.class);
                 startActivity(intent1);
                 return true;
 
             case R.id.menu_Autor:
-                Intent intent2 = new Intent(this, Form_Autor.class);
+                Intent intent2 = new Intent(this, AutorList.class);
                 startActivity(intent2);
                 return true;
             case R.id.menu_Estante:
-                Intent intent3 = new Intent(this, Form_Estante.class);
+                Intent intent3 = new Intent(this, EstanteList.class);
                 startActivity(intent3);
                 return true;
             case R.id.menu_Editorial:
-                Intent intent4 = new Intent(this, Form_Editorial.class);
+                Intent intent4 = new Intent(this, EditorialList.class);
                 startActivity(intent4);
                 return true;
             default:

@@ -51,6 +51,7 @@ public class Form_Editorial extends AppCompatActivity {
                     Toast.makeText(Form_Editorial.this,
                             nombre+" insertado", Toast.LENGTH_LONG).show();
                     txtNombreE.setText("");
+                    txtNacionalidadE.setText("");
                 }else{
                     Toast.makeText(Form_Editorial.this,
                             "Error al insertar", Toast.LENGTH_LONG).show();
@@ -78,20 +79,20 @@ public class Form_Editorial extends AppCompatActivity {
 
 
             case R.id.menu_Libro:
-                Intent intent1 = new Intent(this, Form_Libro.class);
+                Intent intent1 = new Intent(this, LibroList.class);
                 startActivity(intent1);
                 return true;
 
             case R.id.menu_Autor:
-                Intent intent2 = new Intent(this, Form_Autor.class);
+                Intent intent2 = new Intent(this, AutorList.class);
                 startActivity(intent2);
                 return true;
             case R.id.menu_Estante:
-                Intent intent3 = new Intent(this, Form_Estante.class);
+                Intent intent3 = new Intent(this, EstanteList.class);
                 startActivity(intent3);
                 return true;
             case R.id.menu_Editorial:
-                Intent intent4 = new Intent(this, Form_Editorial.class);
+                Intent intent4 = new Intent(this, EditorialList.class);
                 startActivity(intent4);
                 return true;
             default:

@@ -88,17 +88,17 @@ public class DbEditorial extends DbHelper {
     }
 
 
-    public int actualizarEditorial(int id, String nombre, String nacionalidad){
+    public int actualizarEditorial(Editorial editorial){
         DbHelper helper = new DbHelper(context);
         SQLiteDatabase db = helper.getWritableDatabase();
 
 
-        ContentValues values = new ContentValues();
-        values.put("nombre",nombre);
-        values.put("nacionalidad",nacionalidad);
+        ContentValues valores = new ContentValues();
+        valores.put("nombre", editorial.getNombre());
+        valores.put("nacionalidad", editorial.getNacionalidad());
 
-        int resultado = db.update(TABLE_EDITORIAL,values,
-                "id = ?", new String[] { String.valueOf(id) } );
+        int resultado = db.update(TABLE_EDITORIAL,valores,
+                "id = ?", new String[] { String.valueOf(editorial.getId()) } );
 
         return resultado;
 

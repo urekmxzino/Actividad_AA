@@ -1,6 +1,8 @@
 package com.aravena.actividad_semana_aa.models;
 
-public class Libro {
+import java.io.Serializable;
+
+public class Libro implements Serializable {
     private int id;
     private String titulo;
     private String descripcion;
